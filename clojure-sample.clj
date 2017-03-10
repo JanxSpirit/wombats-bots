@@ -11,7 +11,7 @@
                          (repeat 1 {:action :smoke
                                     :metadata {:direction (rand-nth smoke-directions)}})]]
 
-    (if (= (:next state) :shoot)
+    (if (= (:next state) "shoot")
       {:command {:action :shoot :metadata {}}
        :state {:next :turn}}
       {:command {:action :turn :metadata {:direction :left}}
